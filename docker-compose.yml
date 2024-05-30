@@ -1,0 +1,10 @@
+services:
+    db:
+        image: postgres:16.3-alpine3.20
+        restart: always
+        environment:
+            - POSTGRES_PASSWORD=postgres
+            - POSTGRES_USER=postgres
+            - POSTGRES_DB=hotels-booking
+        ports:
+            - 1000:5432
