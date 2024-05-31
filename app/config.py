@@ -8,6 +8,7 @@ class Settings(BaseSettings):
     postgres_hostname: str
     postgres_port: int
     secret_key: str
+    algorithm: str
 
     model_config = SettingsConfigDict(env_file=".env")
 

@@ -4,12 +4,14 @@ from datetime import date, timedelta
 from pydantic import BaseModel, Field
 from fastapi import FastAPI, Query, Depends
 
-from app.bookings.router import router as booking_router
+from app.bookings.router import router as bookings_router
+from app.users.router import router as users_router
 
 
 app = FastAPI(title="Hotels")
 
-app.include_router(booking_router)
+app.include_router(users_router)
+app.include_router(bookings_router)
 
 
 class SHotel(BaseModel):
