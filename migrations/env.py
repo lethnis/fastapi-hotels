@@ -7,7 +7,8 @@ from alembic import context
 
 from app.config import ASYNC_DATABASE_URL
 from app.database import Base
-from app.hotels.models import Hotels, Rooms
+from app.hotels.models import Hotels
+from app.hotels.rooms.models import Rooms
 from app.users.models import Users
 from app.bookings.models import Bookings
 
